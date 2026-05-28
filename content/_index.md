@@ -27,6 +27,9 @@ sections:
         - text: View Projects
           url: "#projects"
           icon: arrow-down
+        - text: Download Resume
+          url: "/uploads/resume.pdf"
+          icon: document-arrow-down
         - text: Contact Me
           url: "#contact"
           icon: envelope
@@ -40,6 +43,56 @@ sections:
           dark: "#0a0a0f"
       spacing:
         padding: ["6rem", "0", "4rem", "0"]
+
+  - block: markdown
+    id: about
+    content:
+      title: "Career Snapshot"
+      text: |-
+        I am a **Software Developer** and **M.S. Computer Engineering student at New York University** with hands-on experience across backend systems, full-stack applications, AI workflows, and MLOps.
+
+        - **NYU Langone Health:** Research Assistant fine-tuning and evaluating vision-language models for clinical imaging workflows.
+        - **New York University:** Course Assistant mentoring 100+ graduate students on AI, GPU profiling, PyTorch, vLLM, RAG, quantization, and cloud deployment.
+        - **Accenture:** Built Java/Spring Boot microservices, Kafka-based transaction workflows, Jenkins CI pipelines, and full-stack internal tooling for banking and sprint planning systems.
+        - **Current focus:** Scalable backend engineering, real-time data systems, applied machine learning, and production-ready AI workflows.
+    design:
+      background:
+        color:
+          light: "#ffffff"
+          dark: "#0d0d12"
+      spacing:
+        padding: ["4rem", "0", "3rem", "0"]
+
+  - block: stats
+    id: highlights
+    content:
+      title: "Resume Highlights"
+      text: "Selected outcomes from my resume and LinkedIn profile."
+      items:
+        - statistic: "2+"
+          description: "years building software at Accenture"
+          sub_metric: "Backend, full-stack, CI, and banking systems"
+          icon: hero/briefcase
+        - statistic: "100k+"
+          description: "daily transactions supported"
+          sub_metric: "Kafka-backed core banking workflows"
+          icon: hero/chart-bar
+        - statistic: "100+"
+          description: "graduate students mentored"
+          sub_metric: "AI workflows, GPU profiling, PyTorch, and LLM systems"
+          icon: hero/academic-cap
+        - statistic: "50k+"
+          description: "clinical images in model workflows"
+          sub_metric: "Vision-language model fine-tuning and evaluation"
+          icon: hero/cpu-chip
+    design:
+      layout: cards
+      background:
+        color:
+          light: "#f5f5f5"
+          dark: "#08080c"
+      spacing:
+        padding: ["3rem", "0", "4rem", "0"]
 
   - block: portfolio
     id: projects
