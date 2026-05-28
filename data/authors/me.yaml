@@ -43,13 +43,18 @@ education:
     start: 2024-09-01
     end: 2026-05-01
     summary: |
-      GPA: 3.87/4.00. Coursework includes Machine Learning, Deep Learning, Data Structures, and Generative AI / LLMs.
+      GPA: 3.87/4.00.
   - degree: B.Tech. in Information Technology
     institution: University of Mumbai
     start: 2018-08-01
     end: 2022-07-01
     summary: |
       GPA: 8.64/10.00.
+relevant_coursework:
+  - Machine Learning
+  - Deep Learning
+  - Data Structures
+  - Generative AI / LLMs
 
 experience:
   - role: Research Assistant

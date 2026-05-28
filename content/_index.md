@@ -123,11 +123,13 @@ sections:
     content:
       title: "Education"
       text: |-
-        - **M.S. Computer Engineering, New York University**
-          2024-2026. GPA: 3.87/4.00. Coursework includes Machine Learning, Deep Learning, Data Structures, and Generative AI / LLMs.
+        - **M.S. Computer Engineering, New York University** 2024-2026.<br>
+          GPA: 3.87/4.00.
 
-        - **B.Tech. Information Technology, University of Mumbai**
-          2018-2022. GPA: 8.64/10.00.
+        - **B.Tech. Information Technology, University of Mumbai** 2018-2022.<br>
+          GPA: 8.64/10.00.
+
+        **Relevant Coursework:** Machine Learning, Deep Learning, Data Structures, and Generative AI / LLMs.
     design:
       background:
         color:
