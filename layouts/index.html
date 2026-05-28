@@ -116,6 +116,25 @@
       <h2>Projects</h2>
       <p>Featured GitHub repositories and selected software, AI, data, and MLOps work.</p>
     </div>
+    {{- $projectFilters := slice
+      (dict "label" "All" "value" "all")
+      (dict "label" "Featured" "value" "featured")
+      (dict "label" "AI" "value" "ai")
+      (dict "label" "Backend" "value" "backend")
+      (dict "label" "Full-Stack" "value" "full-stack")
+      (dict "label" "Data" "value" "data")
+    -}}
+    <div class="project-filter" aria-label="Project filters">
+      {{ range $projectFilters }}
+        <button
+          class="project-filter-button{{ if eq .value "featured" }} is-active{{ end }}"
+          type="button"
+          data-project-filter="{{ .value }}"
+          aria-pressed="{{ if eq .value "featured" }}true{{ else }}false{{ end }}">
+          {{ .label }}
+        </button>
+      {{ end }}
+    </div>
     <div class="project-grid">
       {{ range $projects.ByDate.Reverse }}
         {{ partial "project-card.html" . }}

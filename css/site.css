@@ -516,6 +516,44 @@ h4 {
   gap: 1.1rem;
 }
 
+.project-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin: -.4rem 0 1.5rem;
+}
+
+.project-filter-button {
+  min-height: 3.15rem;
+  padding: .7rem 1.35rem;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 999px;
+  background: #15171d;
+  color: var(--text-soft);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 750;
+  cursor: pointer;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
+}
+
+.project-filter-button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(122, 167, 255, .55);
+  color: var(--text);
+}
+
+.project-filter-button.is-active {
+  border-color: #2563ff;
+  background: #2563ff;
+  color: #fff;
+  box-shadow: 0 16px 34px rgba(37, 99, 255, .28);
+}
+
+.project-card[hidden] {
+  display: none;
+}
+
 .project-card {
   overflow: hidden;
   display: flex;
@@ -768,6 +806,16 @@ h4 {
   .skill-category-title::before,
   .skill-category-title::after {
     width: 44px;
+  }
+
+  .project-filter {
+    gap: .55rem;
+  }
+
+  .project-filter-button {
+    min-height: 2.75rem;
+    padding: .6rem .95rem;
+    font-size: .92rem;
   }
 
   .experience-title,

@@ -1,5 +1,9 @@
 {{- $image := .Resources.GetMatch "featured.*" -}}
-<article class="project-card">
+{{- $filterTags := slice -}}
+{{- range (.Params.tags | default slice) -}}
+  {{- $filterTags = $filterTags | append (. | urlize) -}}
+{{- end -}}
+<article class="project-card" data-project-card data-project-tags="{{ delimit $filterTags " " }}">
   <a class="project-card-media" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
     {{ with $image }}
       <img src="{{ .RelPermalink }}" alt="" loading="lazy">
