@@ -13,11 +13,16 @@ tech_stack:
   - REST APIs
   - WebSocket
   - STOMP
+  - Chart.js
 featured: true
-status: "Project"
+status: "GitHub"
 role: "Developer"
 duration: "Academic project"
 team_size: 1
+links:
+  - type: github
+    url: https://github.com/aneeshKM/Real-Time-Data-Visualization-Dashboard
+    label: GitHub
 highlights:
   - "Live metrics streaming"
   - "REST API and WebSocket integration"

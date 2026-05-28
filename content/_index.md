@@ -6,12 +6,13 @@ type: landing
 
 sections:
   - block: dev-hero
-    id: hero
+    id: home
     content:
       username: me
       greeting: "Hi, I'm"
       show_status: true
       show_scroll_indicator: true
+      scroll_target: "#work-experience"
       typewriter:
         enable: true
         prefix: "I build"
@@ -24,15 +25,18 @@ sections:
         delete_speed: 40
         pause_time: 2500
       cta_buttons:
-        - text: View Projects
+        - text: Work Experience
+          url: "#work-experience"
+          icon: briefcase
+        - text: Projects
           url: "#projects"
-          icon: arrow-down
+          icon: code-bracket
+        - text: Contact
+          url: "#contact"
+          icon: envelope
         - text: Download Resume
           url: "/uploads/resume.pdf"
           icon: document-arrow-down
-        - text: Contact Me
-          url: "#contact"
-          icon: envelope
     design:
       style: centered
       avatar_shape: circle
@@ -42,93 +46,13 @@ sections:
           light: "#fafafa"
           dark: "#0a0a0f"
       spacing:
-        padding: ["6rem", "0", "4rem", "0"]
-
-  - block: markdown
-    id: about
-    content:
-      title: "Career Snapshot"
-      text: |-
-        I am a **Software Developer** and **M.S. Computer Engineering student at New York University** with hands-on experience across backend systems, full-stack applications, AI workflows, and MLOps.
-
-        - **NYU Langone Health:** Research Assistant fine-tuning and evaluating vision-language models for clinical imaging workflows.
-        - **New York University:** Course Assistant mentoring 100+ graduate students on AI, GPU profiling, PyTorch, vLLM, RAG, quantization, and cloud deployment.
-        - **Accenture:** Built Java/Spring Boot microservices, Kafka-based transaction workflows, Jenkins CI pipelines, and full-stack internal tooling for banking and sprint planning systems.
-        - **Current focus:** Scalable backend engineering, real-time data systems, applied machine learning, and production-ready AI workflows.
-    design:
-      background:
-        color:
-          light: "#ffffff"
-          dark: "#0d0d12"
-      spacing:
-        padding: ["4rem", "0", "3rem", "0"]
-
-  - block: stats
-    id: highlights
-    content:
-      title: "Resume Highlights"
-      text: "Selected outcomes from my resume and LinkedIn profile."
-      items:
-        - statistic: "2+"
-          description: "years building software at Accenture"
-          sub_metric: "Backend, full-stack, CI, and banking systems"
-          icon: hero/briefcase
-        - statistic: "100k+"
-          description: "daily transactions supported"
-          sub_metric: "Kafka-backed core banking workflows"
-          icon: hero/chart-bar
-        - statistic: "100+"
-          description: "graduate students mentored"
-          sub_metric: "AI workflows, GPU profiling, PyTorch, and LLM systems"
-          icon: hero/academic-cap
-        - statistic: "50k+"
-          description: "clinical images in model workflows"
-          sub_metric: "Vision-language model fine-tuning and evaluation"
-          icon: hero/cpu-chip
-    design:
-      layout: cards
-      background:
-        color:
-          light: "#f5f5f5"
-          dark: "#08080c"
-      spacing:
-        padding: ["3rem", "0", "4rem", "0"]
-
-  - block: portfolio
-    id: projects
-    content:
-      title: "Featured Projects"
-      subtitle: "Systems, data, and machine learning work"
-      count: 0
-      filters:
-        folders:
-          - projects
-      buttons:
-        - name: All
-          tag: '*'
-        - name: Full-Stack
-          tag: Full-Stack
-        - name: Backend
-          tag: Backend
-        - name: AI
-          tag: AI
-        - name: Data
-          tag: Data
-      default_button_index: 0
-    design:
-      columns: 3
-      background:
-        color:
-          light: "#ffffff"
-          dark: "#0d0d12"
-      spacing:
-        padding: ["4rem", "0", "4rem", "0"]
+        padding: ["6rem", "0", "3rem", "0"]
 
   - block: tech-stack
     id: skills
     content:
-      title: "Tech Stack"
-      subtitle: "Technologies I use to build reliable software systems"
+      title: "Skills"
+      subtitle: "Core technologies across backend engineering, full-stack development, AI, data, and MLOps"
       categories:
         - name: Languages
           items:
@@ -170,8 +94,10 @@ sections:
               icon: devicon/html5
             - name: CSS3
               icon: devicon/css3
-        - name: Cloud and MLOps
+        - name: AI, Cloud, and Tools
           items:
+            - name: PyTorch
+              icon: devicon/pytorch
             - name: AWS
               icon: devicon/amazonwebservices
             - name: Docker
@@ -180,8 +106,6 @@ sections:
               icon: devicon/git
             - name: Linux
               icon: devicon/linux
-            - name: PyTorch
-              icon: devicon/pytorch
             - name: Grafana
               icon: devicon/grafana
     design:
@@ -189,64 +113,63 @@ sections:
       show_levels: false
       background:
         color:
+          light: "#ffffff"
+          dark: "#0d0d12"
+      spacing:
+        padding: ["3rem", "0", "3rem", "0"]
+
+  - block: markdown
+    id: education
+    content:
+      title: "Education"
+      text: |-
+        - **M.S. Computer Engineering, New York University**
+          2024-2026. GPA: 3.87/4.00. Coursework includes Machine Learning, Deep Learning, Data Structures, and Generative AI / LLMs.
+
+        - **B.Tech. Information Technology, University of Mumbai**
+          2018-2022. GPA: 8.64/10.00.
+    design:
+      background:
+        color:
           light: "#f5f5f5"
           dark: "#08080c"
       spacing:
-        padding: ["4rem", "0", "4rem", "0"]
+        padding: ["3rem", "0", "4rem", "0"]
 
-  - block: resume-experience
-    id: experience
+  - block: markdown
+    id: work-experience
     content:
-      title: Experience
-      date_format: Jan 2006
-      items:
-        - title: Research Assistant
-          company: NYU Langone Health
-          company_url: https://nyulangone.org/
-          company_logo: ''
-          location: New York City, NY
-          date_start: '2025-07-01'
-          date_end: ''
-          description: |2-
-            * Fine-tuned 3+ vision-language models on a curated dataset of 50k+ clinical images
-            * Built reproducible preprocessing and benchmarking pipelines with AUROC, F1, and per-class accuracy evaluation
-            * Benchmarked PEFT strategies across model architectures and identified configurations improving AUROC by 3-5%
-        - title: Course Assistant
-          company: New York University
-          company_url: https://www.nyu.edu/
-          company_logo: ''
-          location: New York City, NY
-          date_start: '2025-09-01'
-          date_end: ''
-          description: |2-
-            * Mentored 100+ graduate students across AI workflows, GPU profiling, and performance bottleneck analysis
-            * Supported coursework in high performance machine learning, artificial intelligence, and LLM-based generative AI systems
-            * Guided students on PyTorch profiling, CUDA concepts, vLLM, RAG workflows, quantization, and cloud deployment
-        - title: Application Development Analyst
-          company: Accenture
-          company_url: https://www.accenture.com/
-          company_logo: ''
-          location: Mumbai, India
-          date_start: '2024-03-01'
-          date_end: '2024-08-01'
-          description: |2-
-            * Engineered 5+ Spring Boot microservices for core banking transactions including deposits, mandates, and remittance processing
-            * Integrated Kafka for real-time processing of 100,000+ daily transactions
-            * Designed Jenkins CI pipelines and reduced average build-to-deploy cycle time by 25%
-            * Achieved 90%+ code coverage with JUnit and Mockito test suites
-        - title: Application Development Associate
-          company: Accenture
-          company_url: https://www.accenture.com/
-          company_logo: ''
-          location: Mumbai, India
-          date_start: '2022-09-01'
-          date_end: '2024-03-01'
-          description: |2-
-            * Led 8 developers building a scalable task-tracking platform with Alpine.js, Tailwind CSS, Java, Spring Boot, AWS, and PostgreSQL
-            * Implemented Kanban workflows, story creation, and estimation features for cross-functional sprint planning
-            * Reduced frontend bundle size by 20% and cut initial page load time by 1.8s through a custom Webpack setup
+      title: "Work Experience"
+      text: |-
+        ### Research Assistant, NYU Langone Health
+        **Jul 2025 - Present | New York City, NY**
+
+        - Fine-tuned 3+ vision-language models on a curated dataset of 50k+ clinical images.
+        - Built reproducible preprocessing and benchmarking pipelines with AUROC, F1, and per-class accuracy evaluation.
+        - Benchmarked PEFT strategies across model architectures and identified configurations improving AUROC by 3-5%.
+
+        ### Course Assistant, New York University
+        **Sep 2025 - Present | New York City, NY**
+
+        - Mentored 100+ graduate students across AI workflows, GPU profiling, and performance bottleneck analysis.
+        - Supported coursework in high performance machine learning, artificial intelligence, and LLM-based generative AI systems.
+        - Guided students on PyTorch profiling, CUDA concepts, vLLM, RAG workflows, quantization, and cloud deployment.
+
+        ### Application Development Analyst, Accenture
+        **Mar 2024 - Aug 2024 | Mumbai, India**
+
+        - Engineered 5+ Spring Boot microservices for core banking transactions including deposits, mandates, and remittance processing.
+        - Integrated Kafka for real-time processing of 100,000+ daily transactions.
+        - Designed Jenkins CI pipelines and reduced average build-to-deploy cycle time by 25%.
+        - Achieved 90%+ code coverage with JUnit and Mockito test suites.
+
+        ### Application Development Associate, Accenture
+        **Sep 2022 - Mar 2024 | Mumbai, India**
+
+        - Led 8 developers building a scalable task-tracking platform with Alpine.js, Tailwind CSS, Java, Spring Boot, AWS, and PostgreSQL.
+        - Implemented Kanban workflows, story creation, and estimation features for cross-functional sprint planning.
+        - Reduced frontend bundle size by 20% and cut initial page load time by 1.8s through a custom Webpack setup.
     design:
-      columns: '1'
       background:
         color:
           light: "#ffffff"
@@ -254,10 +177,45 @@ sections:
       spacing:
         padding: ["4rem", "0", "4rem", "0"]
 
+  - block: portfolio
+    id: projects
+    content:
+      title: "Projects"
+      subtitle: "Featured GitHub repositories and selected software, AI, data, and MLOps work"
+      count: 0
+      filters:
+        folders:
+          - projects
+      buttons:
+        - name: All
+          tag: '*'
+        - name: Featured
+          tag: Featured
+        - name: AI
+          tag: AI
+        - name: Backend
+          tag: Backend
+        - name: Full-Stack
+          tag: Full-Stack
+        - name: Data
+          tag: Data
+      default_button_index: 0
+      archive:
+        enable: false
+    design:
+      columns: 3
+      fallback_icon: code-bracket
+      background:
+        color:
+          light: "#f5f5f5"
+          dark: "#08080c"
+      spacing:
+        padding: ["4rem", "0", "4rem", "0"]
+
   - block: contact-info
     id: contact
     content:
-      title: Get In Touch
+      title: Contact
       subtitle: "Open to software engineering, full-stack, backend, and ML systems roles"
       text: |-
         I am interested in building reliable software systems across backend services, full-stack products, and AI/data workflows.
@@ -270,28 +228,6 @@ sections:
         color:
           light: "#ffffff"
           dark: "#0d0d12"
-      spacing:
-        padding: ["4rem", "0", "4rem", "0"]
-
-  - block: cta-card
-    content:
-      title: "Open to Opportunities"
-      text: |-
-        I am currently open to **software engineering**, **full-stack**, **backend**, and **ML systems** opportunities.
-
-        Let's connect and discuss how I can contribute to your team.
-      button:
-        text: 'Download Resume'
-        url: uploads/resume.pdf
-        new_tab: true
-    design:
-      card:
-        css_class: 'bg-gradient-to-br from-primary-200 via-primary-100 to-secondary-200 dark:from-primary-600 dark:via-primary-700 dark:to-secondary-700'
-        text_color: dark
-      background:
-        color:
-          light: "#f5f5f5"
-          dark: "#08080c"
       spacing:
         padding: ["4rem", "0", "6rem", "0"]
 ---

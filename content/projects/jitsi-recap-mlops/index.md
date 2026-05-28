@@ -3,6 +3,7 @@ title: "Jitsi Topic Segmentation and Recap MLOps System"
 date: 2026-05-01
 summary: "Data orchestration, feedback capture, and monitoring pipeline for meeting transcript segmentation and recap generation"
 tags:
+  - Featured
   - Full-Stack
   - AI
   - MLOps
@@ -15,10 +16,14 @@ tech_stack:
   - Grafana
   - Alertmanager
 featured: true
-status: "Project"
+status: "Featured"
 role: "Developer"
 duration: "Academic project"
 team_size: 1
+links:
+  - type: github
+    url: https://github.com/aneeshKM/ML-Sys-Ops-Project
+    label: GitHub
 highlights:
   - "Transcript ingestion and model-ready data transformation"
   - "Human-in-the-loop feedback pipeline"
