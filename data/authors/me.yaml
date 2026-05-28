@@ -2,99 +2,142 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  display: Alex Johnson
-  given: Alex
-  family: Johnson
+  display: Aneesh Mokashi
+  given: Aneesh
+  family: Mokashi
 postnominals: []
 status:
-  icon: "💻"  # Emoji shown on avatar badge: 💻 developer, 🎨 designer, 🚀 startup, 🔬 researcher, 🎓 student
-role: Full-Stack Developer
-email: alex@example.com
+  icon: "💻"
+role: Software Developer | MS Computer Engineering at NYU
+email: aneeshkmokashi@gmail.com
 bio: |
-  Full-stack developer with 5+ years of experience building scalable web applications.
-  Passionate about modern JavaScript, cloud architecture, and creating delightful user experiences.
+  Software developer with around 2 years of experience at Accenture building scalable systems with Java, Spring Boot, React, Kafka, AWS, and PostgreSQL. Currently focused on AI, big data, and ML systems through graduate work at NYU.
 
 affiliations:
-  - name: Tech Corp
-    url: https://techcorp.example.com
+  - name: New York University
+    url: https://www.nyu.edu/
+  - name: NYU Langone Health
+    url: https://nyulangone.org/
 
 links:
   - icon: at-symbol
-    url: mailto:alex@example.com
-    label: E-mail Me
+    url: mailto:aneeshkmokashi@gmail.com
+    label: Email
   - icon: brands/github
-    url: https://github.com/alexjohnson
+    url: https://github.com/aneeshKm
+    label: GitHub
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/alexjohnson/
-  - icon: brands/x
-    url: https://x.com/alexjohnson
+    url: https://www.linkedin.com/in/aneeshkmokashi/
+    label: LinkedIn
 
 interests:
-  - Web Development
-  - Cloud Architecture
-  - Open Source
-  - Developer Experience
+  - Full-Stack Development
+  - Backend Systems
+  - AI and Machine Learning
+  - Big Data Analytics
+  - MLOps
 
 education:
-  - degree: B.S. Computer Science
-    institution: State University
-    start: 2015-09-01
-    end: 2019-05-31
+  - degree: M.S. in Computer Engineering
+    institution: New York University
+    start: 2024-09-01
+    end: 2026-05-01
     summary: |
-      Focus on software engineering and distributed systems.
-      Senior project on distributed caching systems.
-    button:
-      text: View Project
-      url: https://github.com/alexjohnson/senior-project
-      icon: brands/github
+      GPA: 3.87/4.00. Coursework includes Machine Learning, Deep Learning, Data Structures, and Generative AI / LLMs.
+  - degree: B.Tech. in Information Technology
+    institution: University of Mumbai
+    start: 2018-08-01
+    end: 2022-07-01
+    summary: |
+      GPA: 8.64/10.00.
 
 experience:
-  - role: Senior Software Engineer
-    org: Tech Corp
-    start: 2023-01-01
+  - role: Research Assistant
+    org: NYU Langone Health
+    start: 2025-07-01
     summary: |
-      Lead development of microservices architecture serving 1M+ users.
-      Improved API response time by 40% through optimization.
-      Mentored team of 5 junior developers.
-  - role: Full-Stack Developer
-    org: Startup Inc
-    start: 2021-06-01
-    end: 2022-12-31
+      Fine-tuning and evaluating medical imaging models including MedGemma, MedCLIP, MedSigLIP, and BioViL-T.
+      Built reproducible preprocessing, training, and evaluation workflows for clinical image datasets.
+  - role: Course Assistant
+    org: New York University
+    start: 2025-09-01
     summary: |
-      Built and deployed 3 production applications from scratch.
-      Implemented CI/CD pipeline reducing deployment time by 60%.
-      Led migration from monolith to microservices architecture.
-  - role: Junior Developer
-    org: Web Agency
-    start: 2020-01-01
-    end: 2021-05-31
+      Mentored 100+ graduate students across AI workflows, GPU profiling, CUDA concepts, PyTorch, vLLM, and LLM system assignments.
+      Supported courses in high performance machine learning, artificial intelligence, and LLM-based generative AI systems.
+  - role: Application Development Analyst
+    org: Accenture
+    start: 2024-03-01
+    end: 2024-08-01
     summary: |
-      Developed client websites using React and modern web technologies.
-      Participated in code reviews and agile ceremonies.
+      Engineered Spring Boot microservices for core banking transactions, integrated Kafka for real-time processing, and built Jenkins CI pipelines.
+      Improved software quality with JUnit and Mockito test suites achieving 90%+ code coverage.
+  - role: Application Development Associate
+    org: Accenture
+    start: 2022-09-01
+    end: 2024-03-01
+    summary: |
+      Led a team of 8 developers building a scalable task-tracking platform with Alpine.js, Tailwind CSS, Java, Spring Boot, AWS, and PostgreSQL.
+      Reduced frontend bundle size by 20% through a custom Webpack setup.
 
 skills:
-  - name: Development
+  - name: Programming
     items:
-      - label: TypeScript
-        level: 5
-      - label: React
-        level: 5
-      - label: Node.js
+      - label: Java
         level: 5
       - label: Python
+        level: 5
+      - label: JavaScript
         level: 4
-  - name: DevOps
+      - label: TypeScript
+        level: 4
+      - label: SQL
+        level: 4
+      - label: C++
+        level: 3
+  - name: Backend and Data
     items:
-      - label: Docker
+      - label: Spring Boot
+        level: 5
+      - label: Kafka
         level: 4
+      - label: PostgreSQL
+        level: 4
+      - label: MySQL
+        level: 4
+      - label: MongoDB
+        level: 3
+      - label: PySpark
+        level: 3
+  - name: Frontend
+    items:
+      - label: React
+        level: 4
+      - label: Angular
+        level: 3
+      - label: Node.js
+        level: 4
+      - label: Tailwind CSS
+        level: 4
+  - name: Cloud and Tools
+    items:
       - label: AWS
         level: 4
-      - label: CI/CD
+      - label: Docker
+        level: 4
+      - label: Git
         level: 5
+      - label: Linux
+        level: 4
+      - label: MLflow
+        level: 3
+      - label: Grafana
+        level: 3
 
 languages:
   - name: English
     level: 5
-    label: Native
+    label: Professional
 
-awards: []
+awards:
+  - title: AIR 5 in Robocon 2020
+    date: 2020-01-01
