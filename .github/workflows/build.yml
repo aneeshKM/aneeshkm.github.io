@@ -2,6 +2,7 @@ name: Build
 
 env:
   NODE_VERSION: '22'
+  HUGO_VERSION: '0.161.1'
 
 on:
   # Standalone trigger for PR validation
@@ -27,7 +28,6 @@ concurrency:
 
 jobs:
   build:
-    if: github.repository_owner != 'HugoBlox'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     outputs:
@@ -48,51 +48,10 @@ jobs:
       if: hashFiles('package.json') != ''
       uses: pnpm/action-setup@v6
 
-    - name: Get Hugo Version
-      id: hugo-version
-      run: |
-        # Install pinned yq version for robust YAML parsing
-        YQ_VERSION="v4.44.1"
-        if ! wget -q --tries=3 --waitretry=1 -O /tmp/yq \
-          "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64"; then
-          echo "::error::Failed to download yq"
-          exit 1
-        fi
-        sudo mv /tmp/yq /usr/local/bin/yq
-        sudo chmod +x /usr/local/bin/yq
-        
-        # Read hugo_version from hugoblox.yaml
-        VERSION=$(yq '.build.hugo_version // ""' hugoblox.yaml 2>/dev/null | grep -v '^null$' || true)
-        
-        # Fallback to a known stable version if not specified
-        DEFAULT_VERSION="0.161.1"
-        VERSION=${VERSION:-$DEFAULT_VERSION}
-        
-        # Validate version format (basic check)
-        if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-          echo "::warning::Invalid hugo_version format '$VERSION', using default $DEFAULT_VERSION"
-          VERSION="$DEFAULT_VERSION"
-        fi
-        
-        echo "HUGO_VERSION=$VERSION" >> $GITHUB_ENV
-        echo "Using Hugo version: $VERSION"
-
     - name: Install dependencies
       run: |
-        # Install Tailwind CLI if package.json exists
         if [ -f "package.json" ]; then
-          echo "Installing Tailwind dependencies..."
           pnpm install --no-frozen-lockfile || npm install
-        fi
-
-    - name: Verify Tailwind CSS dependency
-      if: hashFiles('package.json') != ''
-      run: |
-        if ! node -e "require.resolve('@tailwindcss/cli/package.json')" 2>/dev/null; then
-          echo "::error title=Missing dependency '@tailwindcss/cli'::Hugo >= 0.161.0 requires the npm @tailwindcss/cli package. Add it to package.json:"
-          echo "::error::  pnpm add @tailwindcss/cli tailwindcss"
-          echo "::error::See https://github.com/HugoBlox/kit for upgrade instructions."
-          exit 1
         fi
 
     - name: Setup Hugo
@@ -101,19 +60,16 @@ jobs:
         hugo-version: ${{ env.HUGO_VERSION }}
         extended: true
 
-    # Cache dependencies (Go modules, node_modules) - stable, rarely changes
+    # Cache Node dependencies.
     - uses: actions/cache@v5
       with:
         path: |
-          /tmp/hugo_cache_runner/
           node_modules/
-          modules/*/node_modules/
-        key: ${{ runner.os }}-hugo-deps-${{ hashFiles('**/go.mod', '**/package-lock.json',
-          '**/pnpm-lock.yaml') }}
+        key: ${{ runner.os }}-node-deps-${{ hashFiles('**/package-lock.json', '**/pnpm-lock.yaml') }}
         restore-keys: |
-          ${{ runner.os }}-hugo-deps-
+          ${{ runner.os }}-node-deps-
 
-    # Cache Hugo resources (processed images, CSS) - invalidates only when assets/config change
+    # Cache Hugo resources.
     - uses: actions/cache@v5
       with:
         path: resources/
@@ -129,7 +85,6 @@ jobs:
     - name: Build with Hugo
       env:
         HUGO_ENVIRONMENT: production
-        HUGO_BLOX_LICENSE: ${{ secrets.HUGO_BLOX_LICENSE }}
       run: |
         echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
         hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"

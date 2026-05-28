@@ -1,0 +1,47 @@
+{{ define "main" }}
+{{- $image := .Resources.GetMatch "featured.*" -}}
+<article class="project-page">
+  <header class="page-hero project-hero">
+    <div class="section-shell project-hero-grid">
+      <div>
+        <p class="eyebrow">Project</p>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+        <div class="project-meta">
+          {{ with .Params.status }}<span>{{ . }}</span>{{ end }}
+          {{ with .Params.duration }}<span>{{ . }}</span>{{ end }}
+          {{ with .Params.role }}<span>{{ . }}</span>{{ end }}
+        </div>
+        <div class="hero-actions">
+          {{ range .Params.links }}
+            <a class="button secondary" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label | default .type }}</a>
+          {{ end }}
+        </div>
+      </div>
+      {{ with $image }}
+        <img class="project-hero-image" src="{{ .RelPermalink }}" alt="">
+      {{ end }}
+    </div>
+  </header>
+
+  <div class="section-shell project-detail-grid">
+    <aside class="project-aside">
+      {{ with .Params.tech_stack }}
+        <h2>Tech Stack</h2>
+        <div class="tag-cloud">
+          {{ range . }}<span>{{ . }}</span>{{ end }}
+        </div>
+      {{ end }}
+      {{ with .Params.highlights }}
+        <h2>Highlights</h2>
+        <ul>
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      {{ end }}
+    </aside>
+    <div class="article-content">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,20 @@
+{{- $author := hugo.Data.authors.me -}}
+<header class="site-header">
+  <nav class="nav-shell" aria-label="Main navigation">
+    <a class="brand" href="{{ "/" | relURL }}#home" aria-label="{{ $author.name.display }} home">
+      <span class="brand-mark">AM</span>
+      <span>{{ $author.name.display }}</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <div id="site-menu" class="nav-links">
+      {{ range site.Menus.main.ByWeight }}
+        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{ end }}
+    </div>
+  </nav>
+</header>

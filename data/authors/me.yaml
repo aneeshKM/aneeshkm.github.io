@@ -1,4 +1,4 @@
-schema: hugoblox/author/v1
+schema: personal/author/v1
 slug: me
 is_owner: true
 name:
@@ -59,25 +59,36 @@ relevant_coursework:
 experience:
   - role: Research Assistant
     org: NYU Langone Health
+    category: Academic Experience
+    location: New York City, NY
     start: 2025-07-01
-    summary: |
-      Fine-tuning and evaluating medical imaging models including MedGemma, MedCLIP, MedSigLIP, and BioViL-T.
-      Built reproducible preprocessing, training, and evaluation workflows for clinical image datasets.
+    highlights:
+      - Fine-tuned 3+ vision-language models on a curated dataset of 50k+ clinical images.
+      - Built reproducible preprocessing and benchmarking pipelines with AUROC, F1, and per-class accuracy evaluation.
+      - Benchmarked PEFT strategies across model architectures and identified configurations improving AUROC by 3-5%.
   - role: Course Assistant
     org: New York University
+    category: Academic Experience
+    location: New York City, NY
     start: 2025-09-01
-    summary: |
-      Mentored 100+ graduate students across AI workflows, GPU profiling, CUDA concepts, PyTorch, vLLM, and LLM system assignments.
-      Supported courses in high performance machine learning, artificial intelligence, and LLM-based generative AI systems.
+    highlights:
+      - Mentored 100+ graduate students across AI workflows, GPU profiling, and performance bottleneck analysis.
+      - Supported coursework in high performance machine learning, artificial intelligence, and LLM-based generative AI systems.
+      - Guided students on PyTorch profiling, CUDA concepts, vLLM, RAG workflows, quantization, and cloud deployment.
   - role: Application Development Analyst
     org: Accenture
+    category: Professional Experience
+    location: Mumbai, India
     start: 2022-09-01
     end: 2024-08-01
-    summary: |
-      Engineered Spring Boot microservices for core banking transactions, integrated Kafka for real-time processing, and built Jenkins CI pipelines.
-      Improved software quality with JUnit and Mockito test suites achieving 90%+ code coverage.
-      Led a team of 8 developers building a scalable task-tracking platform with Alpine.js, Tailwind CSS, Java, Spring Boot, AWS, and PostgreSQL.
-      Reduced frontend bundle size by 20% through a custom Webpack setup.
+    highlights:
+      - Engineered 5+ Spring Boot microservices for core banking transactions including deposits, mandates, and remittance processing.
+      - Integrated Kafka for real-time processing of 100,000+ daily transactions.
+      - Designed Jenkins CI pipelines and reduced average build-to-deploy cycle time by 25%.
+      - Achieved 90%+ code coverage with JUnit and Mockito test suites.
+      - Led 8 developers building a scalable task-tracking platform with Alpine.js, Tailwind CSS, Java, Spring Boot, AWS, and PostgreSQL.
+      - Implemented Kanban workflows, story creation, and estimation features for cross-functional sprint planning.
+      - Reduced frontend bundle size by 20% and cut initial page load time by 1.8s through a custom Webpack setup.
 
 skills:
   - name: Programming

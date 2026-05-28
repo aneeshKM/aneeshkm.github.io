@@ -1,0 +1,141 @@
+{{ define "main" }}
+{{- $author := hugo.Data.authors.me -}}
+{{- $projects := where site.RegularPages "Section" "projects" -}}
+<section id="home" class="hero-section">
+  <div class="section-shell hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1>{{ $author.name.display }}</h1>
+      <p class="hero-role">{{ $author.role }}</p>
+      <p class="hero-bio">{{ $author.bio }}</p>
+      <div class="hero-actions" aria-label="Primary actions">
+        <a class="button primary" href="#projects">View Projects</a>
+        <a class="button secondary" href="/uploads/resume.pdf">Download Resume</a>
+        <a class="button ghost" href="mailto:{{ $author.email }}">Email</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      {{ with resources.Get "media/authors/me.png" }}
+        <img class="hero-photo" src="{{ .RelPermalink }}" alt="{{ $author.name.display }}">
+      {{ end }}
+      <div class="hero-facts" aria-label="Focus areas">
+        {{ range $author.interests }}
+          <span>{{ . }}</span>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section section-muted">
+  <div class="section-shell">
+    <div class="section-heading">
+      <p class="eyebrow">Home</p>
+      <h2>Skills</h2>
+      <p>Core technologies across backend engineering, full-stack development, AI, data, and MLOps.</p>
+    </div>
+    <div class="skills-grid">
+      {{ range $author.skills }}
+        <section class="skill-group">
+          <h3>{{ .name }}</h3>
+          <div class="skill-list">
+            {{ range .items }}
+              <span>{{ .label }}</span>
+            {{ end }}
+          </div>
+        </section>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <div class="section-shell narrow">
+    <div class="section-heading">
+      <p class="eyebrow">Home</p>
+      <h2>Education</h2>
+    </div>
+    <div class="education-list">
+      {{ range $author.education }}
+        {{ $start := "" }}
+        {{ $end := "" }}
+        {{ with .start }}{{ $start = (time .).Format "2006" }}{{ end }}
+        {{ with .end }}{{ $end = (time .).Format "2006" }}{{ end }}
+        <article class="education-item">
+          <h3>{{ .degree }}, {{ .institution }} <span>{{ $start }}{{ if $end }}-{{ $end }}{{ end }}</span></h3>
+          <p>{{ .summary | markdownify }}</p>
+        </article>
+      {{ end }}
+      <p class="coursework"><strong>Relevant Coursework:</strong> {{ delimit $author.relevant_coursework ", " }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="work-experience" class="section section-muted">
+  <div class="section-shell">
+    <div class="section-heading">
+      <h2>Work Experience</h2>
+    </div>
+    <div class="experience-columns">
+      {{ range slice "Professional Experience" "Academic Experience" }}
+        {{ $category := . }}
+        {{ $items := where $author.experience "category" $category }}
+        <section class="experience-column">
+          <h3>{{ $category }}</h3>
+          {{ range $items }}
+            <article class="experience-item">
+              <div class="experience-title">
+                <div>
+                  <h4>{{ .role }}</h4>
+                  <p>{{ .org }}</p>
+                </div>
+                <span>{{ partial "date-range.html" . }}</span>
+              </div>
+              <p class="experience-location">{{ .location }}</p>
+              <ul>
+                {{ range .highlights }}
+                  <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+            </article>
+          {{ end }}
+        </section>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="section-shell">
+    <div class="section-heading">
+      <h2>Projects</h2>
+      <p>Featured GitHub repositories and selected software, AI, data, and MLOps work.</p>
+    </div>
+    <div class="project-grid">
+      {{ range $projects.ByDate.Reverse }}
+        {{ partial "project-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact-section">
+  <div class="section-shell narrow">
+    <div class="section-heading">
+      <h2>Contact</h2>
+      <p>Open to software engineering, full-stack, backend, and ML systems roles.</p>
+    </div>
+    <div class="contact-panel">
+      <p>I am interested in building reliable software systems across backend services, full-stack products, and AI/data workflows.</p>
+      <div class="contact-links">
+        <a href="mailto:{{ $author.email }}">{{ $author.email }}</a>
+        {{ range $author.links }}
+          {{ if ne .label "Email" }}
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

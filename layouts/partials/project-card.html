@@ -1,0 +1,28 @@
+{{- $image := .Resources.GetMatch "featured.*" -}}
+<article class="project-card">
+  <a class="project-card-media" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+    {{ with $image }}
+      <img src="{{ .RelPermalink }}" alt="" loading="lazy">
+    {{ else }}
+      <div class="project-card-fallback" aria-hidden="true">Code</div>
+    {{ end }}
+    {{ with .Params.status }}<span class="status-pill">{{ . }}</span>{{ end }}
+  </a>
+  <div class="project-card-body">
+    <div class="project-card-tags">
+      {{ range first 3 (.Params.tags | default slice) }}
+        <span>{{ . }}</span>
+      {{ end }}
+    </div>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p>{{ .Params.summary | default .Summary }}</p>
+    <div class="project-card-actions">
+      <a href="{{ .RelPermalink }}">Details</a>
+      {{ range .Params.links }}
+        {{ if eq .type "github" }}
+          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label | default "GitHub" }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</article>
