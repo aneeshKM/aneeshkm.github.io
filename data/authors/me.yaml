@@ -66,16 +66,11 @@ experience:
       Supported courses in high performance machine learning, artificial intelligence, and LLM-based generative AI systems.
   - role: Application Development Analyst
     org: Accenture
-    start: 2024-03-01
+    start: 2022-09-01
     end: 2024-08-01
     summary: |
       Engineered Spring Boot microservices for core banking transactions, integrated Kafka for real-time processing, and built Jenkins CI pipelines.
       Improved software quality with JUnit and Mockito test suites achieving 90%+ code coverage.
-  - role: Application Development Associate
-    org: Accenture
-    start: 2022-09-01
-    end: 2024-03-01
-    summary: |
       Led a team of 8 developers building a scalable task-tracking platform with Alpine.js, Tailwind CSS, Java, Spring Boot, AWS, and PostgreSQL.
       Reduced frontend bundle size by 20% through a custom Webpack setup.
 

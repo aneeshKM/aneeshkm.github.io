@@ -141,6 +141,21 @@ sections:
     content:
       title: "Work Experience"
       text: |-
+        ## Professional Experience
+
+        ### Application Development Analyst, Accenture
+        **Sep 2022 - Aug 2024 | Mumbai, India**
+
+        - Engineered 5+ Spring Boot microservices for core banking transactions including deposits, mandates, and remittance processing.
+        - Integrated Kafka for real-time processing of 100,000+ daily transactions.
+        - Designed Jenkins CI pipelines and reduced average build-to-deploy cycle time by 25%.
+        - Achieved 90%+ code coverage with JUnit and Mockito test suites.
+        - Led 8 developers building a scalable task-tracking platform with Alpine.js, Tailwind CSS, Java, Spring Boot, AWS, and PostgreSQL.
+        - Implemented Kanban workflows, story creation, and estimation features for cross-functional sprint planning.
+        - Reduced frontend bundle size by 20% and cut initial page load time by 1.8s through a custom Webpack setup.
+
+        ## Academic Experience
+
         ### Research Assistant, NYU Langone Health
         **Jul 2025 - Present | New York City, NY**
 
@@ -154,21 +169,6 @@ sections:
         - Mentored 100+ graduate students across AI workflows, GPU profiling, and performance bottleneck analysis.
         - Supported coursework in high performance machine learning, artificial intelligence, and LLM-based generative AI systems.
         - Guided students on PyTorch profiling, CUDA concepts, vLLM, RAG workflows, quantization, and cloud deployment.
-
-        ### Application Development Analyst, Accenture
-        **Mar 2024 - Aug 2024 | Mumbai, India**
-
-        - Engineered 5+ Spring Boot microservices for core banking transactions including deposits, mandates, and remittance processing.
-        - Integrated Kafka for real-time processing of 100,000+ daily transactions.
-        - Designed Jenkins CI pipelines and reduced average build-to-deploy cycle time by 25%.
-        - Achieved 90%+ code coverage with JUnit and Mockito test suites.
-
-        ### Application Development Associate, Accenture
-        **Sep 2022 - Mar 2024 | Mumbai, India**
-
-        - Led 8 developers building a scalable task-tracking platform with Alpine.js, Tailwind CSS, Java, Spring Boot, AWS, and PostgreSQL.
-        - Implemented Kanban workflows, story creation, and estimation features for cross-functional sprint planning.
-        - Reduced frontend bundle size by 20% and cut initial page load time by 1.8s through a custom Webpack setup.
     design:
       background:
         color:
