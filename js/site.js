@@ -29,7 +29,7 @@ if (projectFilterButtons.length && projectCards.length) {
 
   projectFilterButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      const filter = button.getAttribute('data-project-filter') || 'all';
+      const filter = button.getAttribute('data-project-filter') || 'featured';
 
       projectFilterButtons.forEach((item) => {
         const isActive = item === button;
@@ -38,6 +38,46 @@ if (projectFilterButtons.length && projectCards.length) {
       });
 
       applyProjectFilter(filter);
+    });
+  });
+  applyProjectFilter('featured');
+}
+
+const emailCopyButton = document.querySelector('[data-copy-email]');
+
+if (emailCopyButton) {
+  const copyLabel = emailCopyButton.querySelector('[data-copy-label]');
+  const originalLabel = copyLabel ? copyLabel.textContent : 'Click to copy';
+
+  const writeClipboard = (text) => {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.top = '-999px';
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+    return Promise.resolve();
+  };
+
+  emailCopyButton.addEventListener('click', () => {
+    const email = emailCopyButton.getAttribute('data-copy-email');
+
+    if (!email || !copyLabel) {
+      return;
+    }
+
+    writeClipboard(email).then(() => {
+      copyLabel.textContent = 'Copied';
+      window.setTimeout(() => {
+        copyLabel.textContent = originalLabel;
+      }, 1600);
     });
   });
 }
