@@ -2,7 +2,7 @@
 {{- $icon := $skill.icon | default "" -}}
 {{- if hasPrefix $icon "devicon/" -}}
   {{- $path := strings.TrimPrefix "devicon/" $icon -}}
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ $path }}" alt="" loading="lazy">
+  <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ $path }}" alt="" width="42" height="42" loading="lazy">
 {{- else if eq $icon "custom/sql" -}}
   <svg viewBox="0 0 64 64" aria-hidden="true">
     <ellipse cx="32" cy="13" rx="18" ry="7"></ellipse>

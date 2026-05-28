@@ -12,7 +12,7 @@
   <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}?v={{ now.Format "20060102150405" }}">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
