@@ -91,57 +91,85 @@ experience:
       - Reduced frontend bundle size by 20% and cut initial page load time by 1.8s through a custom Webpack setup.
 
 skills:
-  - name: Programming
+  - name: Languages
     items:
       - label: Java
+        icon: devicon/java/java-original.svg
         level: 5
       - label: Python
+        icon: devicon/python/python-original.svg
         level: 5
       - label: JavaScript
+        icon: devicon/javascript/javascript-original.svg
         level: 4
       - label: TypeScript
-        level: 4
-      - label: SQL
+        icon: devicon/typescript/typescript-original.svg
         level: 4
       - label: C++
+        icon: devicon/cplusplus/cplusplus-original.svg
         level: 3
+      - label: SQL
+        icon: custom/sql
+        level: 4
   - name: Backend and Data
     items:
       - label: Spring Boot
+        icon: devicon/spring/spring-original.svg
         level: 5
+      - label: Node.js
+        icon: devicon/nodejs/nodejs-original.svg
+        level: 4
       - label: Kafka
+        icon: devicon/apachekafka/apachekafka-original.svg
         level: 4
       - label: PostgreSQL
+        icon: devicon/postgresql/postgresql-original.svg
         level: 4
       - label: MySQL
+        icon: devicon/mysql/mysql-original.svg
         level: 4
       - label: MongoDB
+        icon: devicon/mongodb/mongodb-original.svg
         level: 3
       - label: PySpark
+        icon: devicon/apachespark/apachespark-original.svg
         level: 3
   - name: Frontend
     items:
       - label: React
+        icon: devicon/react/react-original.svg
         level: 4
       - label: Angular
+        icon: devicon/angular/angular-original.svg
         level: 3
-      - label: Node.js
-        level: 4
       - label: Tailwind CSS
+        icon: devicon/tailwindcss/tailwindcss-original.svg
+        level: 4
+      - label: HTML5
+        icon: devicon/html5/html5-original.svg
+        level: 4
+      - label: CSS3
+        icon: devicon/css3/css3-original.svg
         level: 4
   - name: Cloud and Tools
     items:
       - label: AWS
+        icon: devicon/amazonwebservices/amazonwebservices-original-wordmark.svg
         level: 4
       - label: Docker
+        icon: devicon/docker/docker-original.svg
         level: 4
       - label: Git
+        icon: devicon/git/git-original.svg
         level: 5
       - label: Linux
+        icon: devicon/linux/linux-original.svg
         level: 4
       - label: MLflow
+        icon: custom/mlflow
         level: 3
       - label: Grafana
+        icon: devicon/grafana/grafana-original.svg
         level: 3
 
 languages:

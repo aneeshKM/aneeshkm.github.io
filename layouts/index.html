@@ -29,18 +29,22 @@
 
 <section id="skills" class="section section-muted">
   <div class="section-shell">
-    <div class="section-heading">
-      <p class="eyebrow">Home</p>
+    <div class="section-heading skills-heading">
       <h2>Skills</h2>
       <p>Core technologies across backend engineering, full-stack development, AI, data, and MLOps.</p>
     </div>
-    <div class="skills-grid">
+    <div class="skills-showcase">
       {{ range $author.skills }}
-        <section class="skill-group">
-          <h3>{{ .name }}</h3>
-          <div class="skill-list">
+        <section class="skill-category">
+          <h3 class="skill-category-title"><span>{{ .name }}</span></h3>
+          <div class="skill-card-grid">
             {{ range .items }}
-              <span>{{ .label }}</span>
+              <article class="skill-card">
+                <div class="skill-icon">
+                  {{ partial "skill-icon.html" . }}
+                </div>
+                <span>{{ .label }}</span>
+              </article>
             {{ end }}
           </div>
         </section>
