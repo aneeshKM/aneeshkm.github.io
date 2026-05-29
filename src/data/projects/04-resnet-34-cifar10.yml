@@ -1,0 +1,50 @@
+order: 4
+slug: resnet-34-cifar10
+title: ResNet-34 Custom Implementation for CIFAR-10
+summary: Lightweight ResNet-34 variant optimized for CIFAR-10 image classification and
+  resource-constrained deployment
+status: Featured
+duration: GitHub project
+role: Developer
+tags:
+  - Featured
+  - AI
+  - Computer Vision
+  - PyTorch
+image: /projects/resnet-34-cifar10/featured.png
+github: https://github.com/aneeshKM/ResNet-34-Custom-Implementation
+techStack:
+  - Python
+  - PyTorch
+  - Jupyter Notebook
+  - ResNet-34
+  - CIFAR-10
+highlights:
+  - Custom ResNet-34 implementation
+  - CIFAR-10 image classification
+  - Efficiency-focused model design
+content:
+  - type: p
+    text: Implemented a custom ResNet-34 variant for CIFAR-10 image classification with a focus on
+      balancing classification accuracy and computational efficiency.
+  - type: h2
+    id: overview
+    text: Overview
+  - type: p
+    text: The project builds a lightweight deep learning model suitable for constrained environments. It
+      keeps the residual learning structure of ResNet while adapting the implementation for smaller
+      image inputs and practical experimentation.
+  - type: h2
+    id: technical-focus
+    text: Technical Focus
+  - type: ul
+    items:
+      - Custom PyTorch implementation of residual blocks and ResNet-34 architecture
+      - CIFAR-10 training and evaluation workflow
+      - Model efficiency considerations for deployment-oriented experiments
+      - Notebook-based experimentation for reproducible model iteration
+  - type: h2
+    id: repository
+    text: Repository
+  - type: p
+    text: The full implementation is available on GitHub.

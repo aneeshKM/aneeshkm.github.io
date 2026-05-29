@@ -1,9 +1,0 @@
-{{- $start := "" -}}
-{{- $end := "" -}}
-{{- with .start -}}{{- $start = (time .).Format "Jan 2006" -}}{{- end -}}
-{{- with .end -}}{{- $end = (time .).Format "Jan 2006" -}}{{- end -}}
-{{- if and $start $end -}}
-  {{- $start }} - {{ $end -}}
-{{- else if $start -}}
-  {{- $start }} - Present
-{{- end -}}

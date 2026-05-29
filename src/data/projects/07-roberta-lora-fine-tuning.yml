@@ -1,0 +1,49 @@
+order: 7
+slug: roberta-lora-fine-tuning
+title: RoBERTa LoRA Fine-Tuning
+summary: Parameter-efficient RoBERTa-base fine-tuning with LoRA for AG News text classification
+status: GitHub
+duration: GitHub project
+role: Developer
+tags:
+  - AI
+  - NLP
+  - Transformers
+  - PyTorch
+image: /projects/roberta-lora-fine-tuning/featured.png
+github: https://github.com/aneeshKM/RoBERTa-Fine-Tuning
+techStack:
+  - Python
+  - PyTorch
+  - RoBERTa
+  - LoRA
+  - AG News
+highlights:
+  - Parameter-efficient fine-tuning
+  - LoRA applied to RoBERTa-base
+  - AG News text classification
+content:
+  - type: p
+    text: Investigated parameter-efficient fine-tuning with Low-Rank Adaptation for RoBERTa-base on the
+      AG News text classification dataset.
+  - type: h2
+    id: overview
+    text: Overview
+  - type: p
+    text: The project focuses on adapting a transformer language model without updating all model
+      weights. LoRA enables efficient experimentation while reducing the amount of trainable
+      parameter overhead compared with full fine-tuning.
+  - type: h2
+    id: technical-focus
+    text: Technical Focus
+  - type: ul
+    items:
+      - RoBERTa-base text classification
+      - LoRA-based parameter-efficient fine-tuning
+      - AG News dataset preprocessing and evaluation
+      - Notebook-based experimentation for reproducible model training
+  - type: h2
+    id: repository
+    text: Repository
+  - type: p
+    text: The fine-tuning workflow is available on GitHub.

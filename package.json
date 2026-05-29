@@ -5,11 +5,17 @@
   "packageManager": "pnpm@10.14.0",
   "description": "Personal portfolio for Aneesh Mokashi.",
   "scripts": {
-    "dev": "hugo server --disableFastRender",
-    "build": "hugo --minify && pagefind --site public",
-    "pagefind": "pagefind --site public"
+    "generate": "node scripts/prepare-deploy.mjs && tsx src/render-static.jsx --out=dist",
+    "dev": "node scripts/prepare-deploy.mjs && tsx src/render-static.jsx --out=dist && node scripts/serve-static.mjs dist",
+    "build": "node scripts/prepare-deploy.mjs && tsx src/render-static.jsx --out=dist",
+    "check": "node scripts/prepare-deploy.mjs && tsx src/render-static.jsx --out=dist && node scripts/check-static.mjs"
   },
   "dependencies": {
-    "pagefind": "^1.4.0"
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.22.3"
   }
 }

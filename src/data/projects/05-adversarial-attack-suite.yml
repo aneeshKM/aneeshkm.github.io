@@ -1,0 +1,49 @@
+order: 5
+slug: adversarial-attack-suite
+title: "Jailbreaking Deep Models: Adversarial Attack Suite"
+summary: Adversarial robustness experiments against ResNet-34 using FGSM, PGD, Momentum PGD, and Patch PGD
+status: Featured
+duration: NYU deep learning project
+role: Developer
+tags:
+  - Featured
+  - AI
+  - Deep Learning
+  - Security
+image: /projects/adversarial-attack-suite/featured.png
+github: https://github.com/aneeshKM/Jailbreaking-Deep-Models-Adversarial-Attack-Suite
+techStack:
+  - Python
+  - PyTorch
+  - Jupyter Notebook
+  - ResNet-34
+  - DenseNet-121
+highlights:
+  - FGSM and PGD adversarial attacks
+  - Momentum and patch-based attack variants
+  - Transferability evaluation against DenseNet-121
+content:
+  - type: p
+    text: Built an adversarial attack suite to evaluate the robustness of a pretrained ResNet-34 model
+      under bounded perturbation attacks.
+  - type: h2
+    id: overview
+    text: Overview
+  - type: p
+    text: The project implements multiple attack strategies and compares how each method affects model
+      behavior. It also evaluates transferability by testing whether adversarial examples crafted
+      for one architecture remain effective on DenseNet-121.
+  - type: h2
+    id: technical-focus
+    text: Technical Focus
+  - type: ul
+    items:
+      - FGSM, PGD, Momentum PGD, and Patch PGD implementations
+      - L-infinity bounded adversarial perturbation experiments
+      - Attack success and model degradation analysis
+      - Transferability testing across ResNet-34 and DenseNet-121
+  - type: h2
+    id: repository
+    text: Repository
+  - type: p
+    text: The implementation and evaluation notebooks are available on GitHub.

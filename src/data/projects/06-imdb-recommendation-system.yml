@@ -1,0 +1,50 @@
+order: 6
+slug: imdb-recommendation-system
+title: IMDB Movie Recommendation System
+summary: Hybrid recommender combining collaborative filtering with TF-IDF content similarity for
+  personalized movie suggestions
+status: Featured
+duration: GitHub project
+role: Developer
+tags:
+  - Featured
+  - AI
+  - Data
+  - Recommender Systems
+image: /projects/imdb-recommendation-system/featured.png
+github: https://github.com/aneeshKM/IMDB-Movie-Reccomendation-System
+techStack:
+  - Python
+  - PySpark
+  - ALS
+  - TF-IDF
+  - Cosine Similarity
+highlights:
+  - Hybrid collaborative and content-based recommendation
+  - PySpark workflow for larger datasets
+  - TF-IDF and cosine similarity over movie metadata
+content:
+  - type: p
+    text: Implemented a hybrid movie recommendation system that combines user interaction signals with
+      content similarity from movie metadata.
+  - type: h2
+    id: overview
+    text: Overview
+  - type: p
+    text: The recommender uses collaborative filtering with ALS and content-based filtering with TF-IDF
+      and cosine similarity. The system is designed to analyze user interactions and movie
+      attributes to produce personalized recommendations.
+  - type: h2
+    id: technical-focus
+    text: Technical Focus
+  - type: ul
+    items:
+      - ALS-based collaborative filtering
+      - TF-IDF vectorization of content metadata
+      - Cosine similarity for content-based ranking
+      - PySpark pipeline for scalable data processing
+  - type: h2
+    id: repository
+    text: Repository
+  - type: p
+    text: The full recommendation pipeline is available on GitHub.

@@ -1,0 +1,52 @@
+order: 3
+slug: transformer-forecasting
+title: Optimizing Transformer-Based Time Series Forecasting
+summary: PyTorch optimization work incorporating FlashAttention into Temporal Fusion Transformer training
+status: Featured
+duration: Academic project
+role: Developer
+tags:
+  - Featured
+  - AI
+  - Data
+  - PyTorch
+image: /projects/transformer-forecasting/featured.png
+github: https://github.com/aneeshKM/Optimizing-Temporal-Fusion-Transformer
+techStack:
+  - Python
+  - PyTorch
+  - FlashAttention
+  - Temporal Fusion Transformer
+highlights:
+  - 10.9% training time reduction
+  - 42.4% faster inference on A100
+  - 74.7% model size reduction with PTQ
+  - Transformer-based forecasting optimization
+content:
+  - type: p
+    text: Incorporated FlashAttention into the Temporal Fusion Transformer to improve training
+      efficiency for time series forecasting workloads.
+  - type: h2
+    id: overview
+    text: Overview
+  - type: p
+    text: The project focused on performance optimization for transformer-based forecasting. By
+      combining FlashAttention, post-training quantization, and Optuna tuning, the training and
+      inference path became more efficient while preserving the forecasting architecture.
+  - type: h2
+    id: technical-focus
+    text: Technical Focus
+  - type: ul
+    items:
+      - PyTorch implementation work for Temporal Fusion Transformer training
+      - Attention-path optimization using FlashAttention
+      - Post-training quantization for deployment-friendly model size reduction
+      - Optuna tuning across batch size and attention-head configurations
+      - Benchmarking training performance before and after optimization
+      - Measuring practical runtime and memory improvements on forecasting workloads
+  - type: h2
+    id: result
+    text: Result
+  - type: p
+    text: The optimized training path achieved a 10.9% reduction in training time, 42.4% faster
+      inference on A100, and a 74.7% model size reduction through quantization.

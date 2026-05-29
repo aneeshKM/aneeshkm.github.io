@@ -1,0 +1,58 @@
+order: 2
+slug: realtime-data-dashboard
+title: Real-Time Data Visualization Dashboard
+summary: Spring Boot dashboard with REST APIs and WebSocket/STOMP streaming for live application metrics
+status: GitHub
+duration: Academic project
+role: Developer
+tags:
+  - Backend
+  - Full-Stack
+  - Data
+  - Java
+image: /projects/realtime-data-dashboard/featured.png
+github: https://github.com/aneeshKM/Real-Time-Data-Visualization-Dashboard
+techStack:
+  - Java
+  - Spring Boot
+  - REST APIs
+  - WebSocket
+  - STOMP
+  - Chart.js
+highlights:
+  - Live metrics streaming
+  - REST API and WebSocket integration
+  - Operational visibility dashboard
+content:
+  - type: p
+    text: Created a real-time analytics dashboard with Spring Boot, REST APIs, and WebSocket/STOMP
+      streaming to surface live application metrics and improve operational visibility.
+  - type: h2
+    id: overview
+    text: Overview
+  - type: p
+    text: The dashboard provides a backend-driven path for collecting and displaying live system
+      metrics. REST endpoints support structured access to metric data, while WebSocket/STOMP
+      streaming keeps the UI updated as new events arrive.
+  - type: h2
+    id: key-features
+    text: Key Features
+  - type: ul
+    items:
+      - REST APIs for metric retrieval and system status endpoints
+      - WebSocket/STOMP channels for live metric updates
+      - Real-time dashboard views for operational visibility
+      - Backend architecture built with Java and Spring Boot
+  - type: h2
+    id: technical-implementation
+    text: Technical Implementation
+  - type: p
+    text: Spring Boot powers the API layer and WebSocket messaging. The streaming path lets clients
+      subscribe to updates instead of polling repeatedly, improving responsiveness for live metric
+      views.
+  - type: h2
+    id: impact
+    text: Impact
+  - type: p
+    text: The system improves observability by making live application behavior visible in one place,
+      giving teams faster feedback when monitoring active workloads.
