@@ -73,7 +73,7 @@ export const site = {
         'Integrated Kafka for real-time processing of 100,000+ daily transactions.',
         'Designed Jenkins CI pipelines and reduced average build-to-deploy cycle time by 25%.',
         'Achieved 90%+ code coverage with JUnit and Mockito test suites.',
-        'Led 8 developers building a scalable task-tracking platform with javascript, CSS, Java, Spring Boot, AWS, and PostgreSQL.',
+        'Led 8 developers building a scalable task-tracking platform with Javascript, CSS, Java, Spring Boot, AWS, and PostgreSQL.',
         'Implemented Kanban workflows, story creation, and estimation features for cross-functional sprint planning.',
         'Reduced frontend bundle size by 20% and cut initial page load time by 1.8s through a custom Webpack setup.',
       ],
