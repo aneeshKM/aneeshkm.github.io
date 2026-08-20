@@ -27,6 +27,17 @@ export const ProjectCard = ({ project }) => {
             <ArrowIcon />
             Details
           </a>
+          {project.liveUrl ? (
+            <a
+              className="project-card-action"
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ArrowIcon />
+              Live Demo
+            </a>
+          ) : null}
           <a
             className="project-card-action project-card-github"
             href={project.github}

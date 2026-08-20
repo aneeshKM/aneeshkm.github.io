@@ -1,0 +1,63 @@
+order: 8
+slug: flashmob-gre
+title: FlashMob GRE
+summary: Full-stack GRE vocabulary flashcard app with 50-word practice sets, bilingual meanings,
+  and validated Excel/CSV imports
+status: Live
+duration: GitHub project
+role: Developer
+tags:
+  - Full-Stack
+  - ALL
+image: /projects/flashmob-gre/featured.png
+github: https://github.com/aneeshKM/FlashMob-Gre
+liveUrl: https://flashmob-gre-web.onrender.com
+techStack:
+  - React
+  - TypeScript
+  - Vite
+  - Bootstrap
+  - Spring Boot
+  - Java
+  - Apache POI
+highlights:
+  - Click-to-flip GRE vocabulary flashcards
+  - Dynamic practice sets organized into 50-word batches
+  - English and Marathi meanings with sample sentences
+  - Password-protected manual and Excel/CSV word imports
+content:
+  - type: p
+    text: Built a full-stack GRE vocabulary study app that turns a bilingual word list into focused,
+      interactive flashcard practice sets.
+  - type: h2
+    id: overview
+    text: Overview
+  - type: p
+    text: FlashMob GRE groups the available vocabulary into 50-word practice sets and also offers an
+      All Words view. Each card initially shows a GRE word, then flips on click to reveal its English
+      meaning, Marathi meaning, and a sample sentence.
+  - type: h2
+    id: key-features
+    text: Key Features
+  - type: ul
+    items:
+      - Responsive practice-set selection and click-to-flip study flow
+      - Automatic set generation based on the number of words in the workbook
+      - Manual word entry and bulk imports from XLSX, XLS, or CSV files
+      - Duplicate detection through normalized English-word matching
+      - Validation of Marathi meanings written in Devanagari script
+      - Password-protected endpoints for adding or importing vocabulary
+  - type: h2
+    id: technical-implementation
+    text: Technical Implementation
+  - type: p
+    text: The React and TypeScript frontend uses Vite, Bootstrap, and React Bootstrap. A Java Spring
+      Boot API reads and updates the vocabulary workbook with Apache POI, exposes paginated word
+      retrieval endpoints, and validates new entries before persisting them.
+  - type: h2
+    id: deployment
+    text: Deployment
+  - type: p
+    text: The frontend and Docker-based backend are deployed on Render. Spring profiles and environment
+      variables configure production CORS, workbook storage, and the password used to protect write
+      operations.

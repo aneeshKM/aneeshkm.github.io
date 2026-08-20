@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArticleBlocks } from '../components/ArticleBlocks.jsx';
-import { GitHubIcon } from '../components/icons.jsx';
+import { ArrowIcon, GitHubIcon } from '../components/icons.jsx';
 
 export const ProjectPage = ({ project }) => (
   <article className="project-page">
@@ -16,6 +16,17 @@ export const ProjectPage = ({ project }) => (
             <span>{project.role}</span>
           </div>
           <div className="hero-actions">
+            {project.liveUrl ? (
+              <a
+                className="button primary project-github-button"
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ArrowIcon />
+                Live Demo
+              </a>
+            ) : null}
             <a
               className="button secondary project-github-button"
               href={project.github}
