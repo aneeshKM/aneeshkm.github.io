@@ -66,8 +66,8 @@ export const site = {
       org: 'Accenture',
       category: 'Professional Experience',
       location: 'Mumbai, India',
-      start: '2022-09-01',
-      end: '2024-08-01',
+      start: '2022-09-19',
+      end: '2024-08-07',
       highlights: [
         'Engineered 5+ Spring Boot microservices for core banking transactions including deposits, mandates, and remittance processing.',
         'Integrated Kafka for real-time processing of 100,000+ daily transactions.',
@@ -84,6 +84,7 @@ export const site = {
       category: 'Academic Experience',
       location: 'New York City, NY',
       start: '2025-07-01',
+      end: '2026-05-15',
       highlights: [
         'Fine-tuned 3+ vision-language models on a curated dataset of 50k+ clinical images.',
         'Built reproducible preprocessing and benchmarking pipelines with AUROC, F1, and per-class accuracy evaluation.',
@@ -96,6 +97,7 @@ export const site = {
       category: 'Academic Experience',
       location: 'New York City, NY',
       start: '2025-09-01',
+      end: '2026-05-15',
       highlights: [
         'Mentored 100+ graduate students across AI workflows, GPU profiling, and performance bottleneck analysis.',
         'Supported coursework in high performance machine learning, artificial intelligence, and LLM-based generative AI systems.',
