@@ -1,4 +1,4 @@
-order: 1
+order: 3
 slug: jitsi-recap-mlops
 title: Jitsi Topic Segmentation and Recap MLOps System
 summary: Data orchestration, feedback capture, and monitoring pipeline for meeting transcript

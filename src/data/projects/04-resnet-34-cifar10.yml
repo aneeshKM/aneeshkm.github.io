@@ -1,4 +1,4 @@
-order: 4
+order: 6
 slug: resnet-34-cifar10
 title: ResNet-34 Custom Implementation for CIFAR-10
 summary: Lightweight ResNet-34 variant optimized for CIFAR-10 image classification and

@@ -1,4 +1,4 @@
-order: 6
+order: 8
 slug: imdb-recommendation-system
 title: IMDB Movie Recommendation System
 summary: Hybrid recommender combining collaborative filtering with TF-IDF content similarity for

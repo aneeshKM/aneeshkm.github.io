@@ -1,4 +1,4 @@
-order: 3
+order: 5
 slug: transformer-forecasting
 title: Optimizing Transformer-Based Time Series Forecasting
 summary: PyTorch optimization work incorporating FlashAttention into Temporal Fusion Transformer training

@@ -1,0 +1,71 @@
+order: 1
+slug: citecraft-rag
+title: CiteCraft RAG
+summary: Source-grounded multi-PDF research assistant with parent-summary retrieval, page-level
+  citations, and benchmarked answer quality
+status: Featured
+duration: Open-source project
+role: Developer
+tags:
+  - Featured
+  - AI
+  - Data
+  - Backend
+image: /projects/citecraft-rag/featured.png
+github: https://github.com/aneeshKM/CiteCraft-RAG
+techStack:
+  - Python
+  - Streamlit
+  - OpenAI API
+  - LangChain
+  - PostgreSQL
+  - pgvector
+  - Redis
+  - Unstructured
+  - Docker Compose
+  - Pytest
+highlights:
+  - Parent-summary multi-vector retrieval over text and tables from multiple PDFs
+  - Filename and page-level citations with an explicit no-answer path
+  - SHA-256 upload deduplication and session-scoped document filtering
+  - 85.9% source-grounded responses on a pinned FinanceBench evaluation
+content:
+  - type: p
+    text: Built a source-grounded research assistant for asking questions across multiple PDFs,
+      with every generated answer tied back to the supporting filename and page number.
+  - type: h2
+    id: architecture
+    text: Retrieval Architecture
+  - type: p
+    text: CiteCraft partitions narrative text and tables with Unstructured while preserving source
+      metadata. Each full element is stored as a parent document in Redis, while a compact summary
+      is embedded and indexed in PostgreSQL with pgvector. At query time, cosine similarity over an
+      HNSW index finds relevant summaries and their parent IDs, allowing the answer model to receive
+      the complete original evidence instead of a shortened retrieval representation.
+  - type: h2
+    id: grounding-and-citations
+    text: Grounding and Citations
+  - type: ul
+    items:
+      - Preserves filenames, page numbers, element types, document hashes, and stable parent IDs
+      - Filters retrieval to the PDFs active in the current Streamlit workspace
+      - Builds numbered source labels into the model context for page-level citations
+      - Returns an explicit no-answer response when the indexed documents do not support a claim
+      - Deduplicates repeated uploads through SHA-256 content hashes
+  - type: h2
+    id: evaluation
+    text: Evaluation
+  - type: p
+    text: Evaluated the system on 32 human-annotated FinanceBench questions spanning 10 financial
+      reports, 403 PDF pages, and 1,154 extracted elements. The recorded run measured 85.9% grounded
+      responses, 84.4% citation completeness, 79.7% citation correctness, and 90.0% abstention
+      accuracy when the source was withheld. Retrieval latency was 0.46 seconds at P95 and end-to-end
+      latency was 7.09 seconds at P95.
+  - type: h2
+    id: engineering
+    text: Engineering and Operations
+  - type: p
+    text: The application uses environment-backed configuration, concurrent summary generation,
+      context-size guardrails, and configurable PDF partition strategies. Docker Compose provisions
+      PostgreSQL with pgvector and Redis locally, while Pytest, Ruff, and GitHub Actions provide
+      automated quality checks.

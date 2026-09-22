@@ -1,4 +1,4 @@
-order: 2
+order: 4
 slug: realtime-data-dashboard
 title: Real-Time Data Visualization Dashboard
 summary: Spring Boot dashboard with REST APIs and WebSocket/STOMP streaming for live application metrics

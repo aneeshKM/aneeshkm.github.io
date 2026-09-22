@@ -1,4 +1,4 @@
-order: 5
+order: 7
 slug: adversarial-attack-suite
 title: "Jailbreaking Deep Models: Adversarial Attack Suite"
 summary: Adversarial robustness experiments against ResNet-34 using FGSM, PGD, Momentum PGD, and Patch PGD

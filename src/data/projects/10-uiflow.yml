@@ -1,0 +1,72 @@
+order: 2
+slug: uiflow
+title: UIFlow Computer-Use Automation
+summary: LLM-guided browser workflow discovery compiled into typed, policy-controlled artifacts for
+  deterministic replay without a model in the decision loop
+status: Featured
+duration: Open-source project
+role: Developer
+tags:
+  - Featured
+  - AI
+  - Full-Stack
+  - Backend
+image: /projects/uiflow/featured.png
+github: https://github.com/aneeshKM/UIFlow
+techStack:
+  - TypeScript
+  - Playwright
+  - OpenAI API
+  - Zod
+  - React
+  - Vite
+  - FastAPI
+  - SQLAlchemy
+  - SQLite
+highlights:
+  - LLM-driven discovery separated from model-free deterministic replay
+  - Versioned capability artifacts with typed inputs, outputs, steps, and checkpoints
+  - Centralized action policy, evidence redaction, and origin and route allowlists
+  - Same-session human takeover with exclusive browser ownership and resumable execution
+content:
+  - type: p
+    text: Built an end-to-end computer-use system that discovers a browser workflow with an LLM,
+      compiles the successful run into a reusable typed capability, and replays it deterministically
+      without calling a model.
+  - type: h2
+    id: architecture
+    text: Architecture
+  - type: p
+    text: A Playwright-backed browser layer exposes bounded semantic operations rather than raw CSS,
+      JavaScript, or coordinates. During discovery, the system observes the accessible UI, requests
+      one structured action from the model, validates it against policy, executes it, and records
+      redacted evidence. The artifact builder then converts the successful run into a versioned JSON
+      capability with typed parameters, outputs, ordered steps, expectations, and a final checkpoint.
+  - type: h2
+    id: deterministic-replay
+    text: Deterministic Replay
+  - type: ul
+    items:
+      - Executes saved capabilities without a model or prompt dependency
+      - Resolves semantic targets through ARIA roles, accessible names, labels, and bounded fallbacks
+      - Validates runtime inputs, step expectations, extracted outputs, and final checkpoints
+      - Separates success, expected business outcomes, and operational failures in the result contract
+      - Handles slow states and locator failures with bounded waits, refreshed observations, and retries
+  - type: h2
+    id: safety-and-handoff
+    text: Safety and Human Handoff
+  - type: p
+    text: A centralized policy classifies actions as safe, human-reviewed, or blocked and constrains
+      navigation by origin and route. The evidence writer recursively redacts credentials, tokens,
+      selected PII, and operator-entered values. On a recoverable failure, automation can transfer
+      exclusive control of the same browser session to a human operator, record the intervention,
+      and resume at the next step.
+  - type: h2
+    id: demo-application
+    text: Full-Stack Test Application
+  - type: p
+    text: The repository includes a synthetic credit-union application used to exercise real browser
+      workflows and controlled failure scenarios. Its React and TypeScript frontend communicates
+      with a FastAPI service backed by SQLAlchemy and SQLite. The test suite covers deterministic
+      success, multi-record extraction, expected business outcomes, timeouts, policy enforcement,
+      failure evidence, and human control transfer.
