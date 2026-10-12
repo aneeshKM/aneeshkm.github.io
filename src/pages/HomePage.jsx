@@ -7,7 +7,7 @@ import { site } from '../site-data.js';
 
 export const HomePage = ({ projects }) => {
   const { author } = site;
-  const experienceGroups = ['Professional Experience', 'Academic Experience'];
+  const experience = [...site.experience].sort((a, b) => b.start.localeCompare(a.start));
 
   return (
     <>
@@ -39,7 +39,7 @@ export const HomePage = ({ projects }) => {
         <div className="section-shell">
           <div className="section-heading skills-heading">
             <h2>Skills</h2>
-            <p>Core technologies across backend engineering, full-stack development, AI, data, and MLOps.</p>
+            <p>Technologies I use to build full-stack applications, data pipelines, cloud infrastructure, and agentic AI systems.</p>
           </div>
           <div className="skills-showcase">
             {site.skills.map((category) => (
@@ -91,26 +91,19 @@ export const HomePage = ({ projects }) => {
           <div className="section-heading">
             <h2>Work Experience</h2>
           </div>
-          <div className="experience-columns">
-            {experienceGroups.map((category) => (
-              <section className="experience-column" key={category}>
-                <h3>{category}</h3>
-                {site.experience
-                  .filter((item) => item.category === category)
-                  .map((item) => (
-                    <article className="experience-item" key={`${item.org}-${item.role}`}>
-                      <div className="experience-title">
-                        <div>
-                          <h4>{item.role}</h4>
-                          <p>{item.org}</p>
-                        </div>
-                        <span>{dateRange(item)}</span>
-                      </div>
-                      <p className="experience-location">{item.location}</p>
-                      <p className="experience-description">{item.description}</p>
-                    </article>
-                  ))}
-              </section>
+          <div className="experience-list">
+            {experience.map((item) => (
+              <article className="experience-item" key={`${item.org}-${item.role}`}>
+                <div className="experience-title">
+                  <div>
+                    <h3>{item.role}</h3>
+                    <p>{item.org}</p>
+                  </div>
+                  <span>{dateRange(item)}</span>
+                </div>
+                <p className="experience-location">{item.location}</p>
+                <p className="experience-description">{item.description}</p>
+              </article>
             ))}
           </div>
         </div>

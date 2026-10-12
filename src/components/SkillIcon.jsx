@@ -6,8 +6,8 @@ export const SkillIcon = ({ icon }) => {
     return <SqlIcon />;
   }
 
-  if (icon === 'custom/mlflow') {
-    return <span className="skill-custom-icon">ML</span>;
+  if (icon.startsWith('custom/')) {
+    return <span className="skill-custom-icon" aria-hidden="true">{icon.slice('custom/'.length)}</span>;
   }
 
   return (
