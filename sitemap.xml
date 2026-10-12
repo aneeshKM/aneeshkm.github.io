@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aneeshkm.github.io/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-12</lastmod>
   </url>
   <url>
     <loc>https://aneeshkm.github.io/projects/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-12</lastmod>
   </url>
   <url>
     <loc>https://aneeshkm.github.io/projects/citecraft-rag/</loc>
@@ -47,5 +47,9 @@
   <url>
     <loc>https://aneeshkm.github.io/projects/flashmob-gre/</loc>
     <lastmod>2026-09-21</lastmod>
+  </url>
+  <url>
+    <loc>https://aneeshkm.github.io/projects/us-airline-performance-data-warehouse/</loc>
+    <lastmod>2026-10-12</lastmod>
   </url>
 </urlset>

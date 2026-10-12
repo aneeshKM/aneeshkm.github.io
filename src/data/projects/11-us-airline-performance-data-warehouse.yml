@@ -1,0 +1,74 @@
+order: 11
+slug: us-airline-performance-data-warehouse
+title: US Airline Performance Data Warehouse
+summary: Incremental Snowflake warehouse for U.S. flight performance with Airflow orchestration,
+  data quality checks, and airline, route, and delay analytics
+status: GitHub
+duration: GitHub project
+role: Developer
+tags:
+  - Data
+  - Backend
+  - Python
+image: /projects/us-airline-performance-data-warehouse/thumbnail.svg
+github: https://github.com/aneeshKM/Us-airline-performance-data-warehouse
+techStack:
+  - Python
+  - Snowflake
+  - SQL
+  - Apache Airflow
+  - Docker
+highlights:
+  - 7,079,060 flight records across all twelve 2024 source months
+  - Dimensional model covering 15 airlines and 348 airports
+  - Incremental monthly ingestion with idempotent MERGE reruns
+  - Three analytics marts with measured query times below 0.3 seconds
+content:
+  - type: p
+    text: Built an incremental data warehouse that transforms monthly Bureau of Transportation
+      Statistics flight files into a dimensional model and analytics for U.S. domestic airline
+      performance.
+  - type: h2
+    id: architecture
+    text: Architecture
+  - type: p
+    text: A streaming Python downloader retrieves monthly BTS archives, validates the extracted
+      CSV, and uploads it to a Snowflake internal stage. SQL loads the raw data, normalizes and
+      deduplicates staging records, and merges airline, airport, and date dimensions into a flight
+      fact table. Apache Airflow orchestrates the pipeline through ten tasks, with retries,
+      failure tracking, and recorded stage metrics. Docker Compose runs the local Airflow services.
+  - type: h2
+    id: incremental-loading
+    text: Incremental Loading
+  - type: ul
+    items:
+      - Successful monthly checkpoints skip files that have already been loaded
+      - Forced reruns replace only the selected month's raw and staging records
+      - Deterministic SHA-256 flight keys and SQL MERGE prevent duplicate fact rows
+      - Source checksums, source months, run IDs, and timestamps preserve data lineage
+  - type: h2
+    id: data-quality
+    text: Data Quality
+  - type: p
+    text: Streaming validation checks required columns, source-month agreement, dates, route
+      identifiers, distance bounds, and duplicate natural keys before upload. Snowflake records
+      source-to-raw, raw-to-staging, and staging-to-fact reconciliation results in a metadata
+      schema. Reconciliation failures stop the run, while invalid source rows are recorded and
+      excluded from the fact table.
+  - type: h2
+    id: analytics
+    text: Analytics
+  - type: ul
+    items:
+      - Airline performance metrics for flight volume, cancellations, arrival delays, and on-time percentage
+      - Directional route analysis for volume, delay, cancellation rate, and elapsed time
+      - Monthly airline delay breakdowns for carrier, weather, airspace, security, and late-aircraft causes
+  - type: h2
+    id: measured-results
+    text: Measured Results
+  - type: p
+    text: The documented October 1, 2026 checkpoint contains 7,079,060 flight records from all
+      twelve 2024 source months, with 15 airlines, 348 airports, and 366 calendar dates. Average
+      monthly pipeline runtime was 96.859 seconds, and the three analytics mart queries took
+      0.218 to 0.287 seconds. One invalid source row was rejected. The January idempotency check
+      retained 547,271 fact rows after both forced runs, with zero new duplicates.

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#102a43"/>
+      <stop offset="1" stop-color="#071421"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 8 4 0 8" fill="none" stroke="#58c9e8" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <g fill="none" stroke="#203a50" stroke-width="1">
+    <path d="M0 700H1600M0 760H1600M0 820H1600M0 880H1600"/>
+    <path d="M200 680V900M400 680V900M600 680V900M800 680V900M1000 680V900M1200 680V900M1400 680V900"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="100" y="125" fill="#58c9e8" font-size="25" letter-spacing="5">DATA ENGINEERING</text>
+    <text x="100" y="220" fill="#f1f7fc" font-size="64" font-weight="700">US Airline Performance</text>
+    <text x="100" y="300" fill="#f1f7fc" font-size="64" font-weight="700">Data Warehouse</text>
+    <text x="100" y="365" fill="#a5bbce" font-size="28">Python · Snowflake · SQL · Apache Airflow · Docker</text>
+    <g fill="#142f45" stroke="#365970" stroke-width="2">
+      <rect x="100" y="465" width="270" height="135" rx="18"/>
+      <rect x="465" y="465" width="270" height="135" rx="18"/>
+      <rect x="830" y="465" width="270" height="135" rx="18"/>
+      <rect x="1195" y="465" width="305" height="135" rx="18"/>
+    </g>
+    <g fill="none" stroke="#58c9e8" stroke-width="3" marker-end="url(#arrow)">
+      <path d="M387 532H443"/>
+      <path d="M752 532H808"/>
+      <path d="M1117 532H1173"/>
+    </g>
+    <g text-anchor="middle">
+      <g fill="#f1f7fc" font-size="29" font-weight="700">
+        <text x="235" y="521">BTS Flights</text>
+        <text x="600" y="521">Raw + Staging</text>
+        <text x="965" y="521">Flight Facts</text>
+        <text x="1347" y="521">Analytics Marts</text>
+      </g>
+      <g fill="#a5bbce" font-size="22">
+        <text x="235" y="561">Monthly source files</text>
+        <text x="600" y="561">Validate + normalize</text>
+        <text x="965" y="561">Dimensions + MERGE</text>
+        <text x="1347" y="561">Airlines · Routes · Delays</text>
+      </g>
+    </g>
+    <rect x="100" y="700" width="1400" height="100" rx="18" fill="#102b3e" stroke="#365970"/>
+    <text x="140" y="762" fill="#58c9e8" font-size="30" font-weight="700">Incremental loads</text>
+    <text x="595" y="762" fill="#d2e1ed" font-size="28">Idempotent reruns</text>
+    <text x="1090" y="762" fill="#d2e1ed" font-size="28">Data quality checks</text>
+  </g>
+</svg>
