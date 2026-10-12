@@ -62,21 +62,24 @@ export const site = {
   ],
   experience: [
     {
-      role: 'Application Development Analyst',
+      role: 'Software Engineer',
       org: 'Accenture',
       category: 'Professional Experience',
       location: 'Mumbai, India',
-      start: '2022-09-19',
-      end: '2024-08-07',
-      highlights: [
-        'Engineered 5+ Spring Boot microservices for core banking transactions including deposits, mandates, and remittance processing.',
-        'Integrated Kafka for real-time processing of 100,000+ daily transactions.',
-        'Designed Jenkins CI pipelines and reduced average build-to-deploy cycle time by 25%.',
-        'Achieved 90%+ code coverage with JUnit and Mockito test suites.',
-        'Led 8 developers building a scalable task-tracking platform with Javascript, CSS, Java, Spring Boot, AWS, and PostgreSQL.',
-        'Implemented Kanban workflows, story creation, and estimation features for cross-functional sprint planning.',
-        'Reduced frontend bundle size by 20% and cut initial page load time by 1.8s through a custom Webpack setup.',
-      ],
+      start: '2024-03-01',
+      end: '2024-08-01',
+      description:
+        'Built backend services for a distributed banking platform using Java, Spring Boot, and Kafka. Owned microservice development, REST APIs, and reusable messaging integrations for reliable transaction processing. Tuned Kafka consumers and SQL queries, and automated builds and deployments through Jenkins, Maven, Docker, and Kubernetes.',
+    },
+    {
+      role: 'Associate Software Engineer',
+      org: 'Accenture',
+      category: 'Professional Experience',
+      location: 'Mumbai, India',
+      start: '2022-09-01',
+      end: '2024-03-01',
+      description:
+        'Developed an internal task-tracking platform with React, TypeScript, and Django on AWS, and led technical delivery through code reviews, feature integration, and production releases. Built data ingestion and transformation services with Docker, Amazon S3, and AWS Lambda. Worked on payment reconciliation by tuning SQL queries and developing Java and Spring Boot APIs backed by PostgreSQL, with role-based access to payment data.',
     },
     {
       role: 'Research Assistant',
@@ -85,11 +88,8 @@ export const site = {
       location: 'New York City, NY',
       start: '2025-07-01',
       end: '2026-05-15',
-      highlights: [
-        'Fine-tuned 3+ vision-language models on a curated dataset of 50k+ clinical images.',
-        'Built reproducible preprocessing and benchmarking pipelines with AUROC, F1, and per-class accuracy evaluation.',
-        'Benchmarked PEFT strategies across model architectures and identified configurations improving AUROC by 3-5%.',
-      ],
+      description:
+        'Worked on clinical AI research, fine-tuning and benchmarking vision-language models with Python and PyTorch and building automated training and evaluation pipelines. Developed an agentic AI system with Gemma and LangGraph to investigate clinical data, supported by MCP tools and FastAPI endpoints for metadata validation, patient linkage, and evidence retrieval with AI guardrails. Built a multimodal duplicate-detection pipeline to identify overlaps in clinical datasets and support data quality.',
     },
     {
       role: 'Course Assistant',
@@ -98,11 +98,8 @@ export const site = {
       location: 'New York City, NY',
       start: '2025-09-01',
       end: '2026-05-15',
-      highlights: [
-        'Mentored 100+ graduate students across AI workflows, GPU profiling, and performance bottleneck analysis.',
-        'Supported coursework in high performance machine learning, artificial intelligence, and LLM-based generative AI systems.',
-        'Guided students on PyTorch profiling, CUDA concepts, vLLM, RAG workflows, quantization, and cloud deployment.',
-      ],
+      description:
+        'Supported graduate coursework in high-performance machine learning, artificial intelligence, and LLM-based generative AI systems. Mentored students on AI workflows, GPU profiling, and performance bottleneck analysis, and guided them through PyTorch profiling, CUDA concepts, vLLM, RAG workflows, quantization, and cloud deployment.',
     },
   ],
   skills: [

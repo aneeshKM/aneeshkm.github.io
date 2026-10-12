@@ -21,7 +21,6 @@ export const HomePage = ({ projects }) => {
             <div className="hero-actions" aria-label="Primary actions">
               <a className="button primary" href="#work-experience">Work Experience</a>
               <a className="button secondary" href="#projects">View Projects</a>
-              <a className="button secondary" href="/uploads/resume.pdf">Download Resume</a>
               <a className="button ghost" href={`mailto:${author.email}`}>Email</a>
             </div>
           </div>
@@ -108,11 +107,7 @@ export const HomePage = ({ projects }) => {
                         <span>{dateRange(item)}</span>
                       </div>
                       <p className="experience-location">{item.location}</p>
-                      <ul>
-                        {item.highlights.map((highlight) => (
-                          <li key={highlight}>{highlight}</li>
-                        ))}
-                      </ul>
+                      <p className="experience-description">{item.description}</p>
                     </article>
                   ))}
               </section>

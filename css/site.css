@@ -537,14 +537,17 @@ h4 {
   font-size: .92rem;
 }
 
-.experience-item ul,
+.experience-description {
+  margin: .9rem 0 0;
+  color: var(--text-soft);
+}
+
 .project-aside ul {
   margin: .9rem 0 0;
   padding-left: 1.2rem;
   color: var(--text-soft);
 }
 
-.experience-item li + li,
 .project-aside li + li {
   margin-top: .45rem;
 }

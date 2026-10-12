@@ -8,7 +8,6 @@ const requiredPaths = [
   'css/site.css',
   'js/site.js',
   'media/authors/me.png',
-  'uploads/resume.pdf',
   'src/site-data.js',
   'src/render-static.jsx',
   'src/data/projects/01-jitsi-recap-mlops.yml',
@@ -24,7 +23,6 @@ const requiredPaths = [
   'dist/projects/citecraft-rag/index.html',
   'dist/projects/uiflow/index.html',
   'dist/media/authors/me.png',
-  'dist/uploads/resume.pdf',
   '.github/workflows/deploy.yml',
 ];
 

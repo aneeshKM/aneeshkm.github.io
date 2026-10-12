@@ -13,7 +13,6 @@ const deployEntries = [
   'projects',
   'robots.txt',
   'sitemap.xml',
-  'uploads',
 ];
 
 async function exists(filePath) {
