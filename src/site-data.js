@@ -81,7 +81,7 @@ export const site = {
         'Developed an internal task-tracking platform with React, TypeScript, and Django on AWS, and led technical delivery through code reviews, feature integration, and production releases. Built data ingestion and transformation services with Docker, Amazon S3, and AWS Lambda. Worked on payment reconciliation by tuning SQL queries and developing Java and Spring Boot APIs backed by PostgreSQL, with role-based access to payment data.',
     },
     {
-      role: 'Research Assistant',
+      role: 'AI Researcher',
       org: 'NYU Langone Health',
       location: 'New York City, NY',
       start: '2025-07-01',

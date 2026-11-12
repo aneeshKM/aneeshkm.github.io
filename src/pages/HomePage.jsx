@@ -7,7 +7,9 @@ import { site } from '../site-data.js';
 
 export const HomePage = ({ projects }) => {
   const { author } = site;
-  const experience = [...site.experience].sort((a, b) => b.start.localeCompare(a.start));
+  const experience = [...site.experience].sort(
+    (a, b) => Number(Boolean(a.end)) - Number(Boolean(b.end)) || b.start.localeCompare(a.start),
+  );
 
   return (
     <>
