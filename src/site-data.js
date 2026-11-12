@@ -85,7 +85,7 @@ export const site = {
       org: 'NYU Langone Health',
       location: 'New York City, NY',
       start: '2025-07-01',
-      end: '2026-05-15',
+      end: null,
       description:
         'Worked on clinical AI research, fine-tuning and benchmarking vision-language models with Python and PyTorch and building automated training and evaluation pipelines. Developed an agentic AI system with Gemma and LangGraph to investigate clinical data, supported by MCP tools and FastAPI endpoints for metadata validation, patient linkage, and evidence retrieval with AI guardrails. Built a multimodal duplicate-detection pipeline to identify overlaps in clinical datasets and support data quality.',
     },
